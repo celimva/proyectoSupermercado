@@ -8,26 +8,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UtilidadesProducto {
-    //a. public List<Producto> getPorTipo(List<Producto> productos,
-    //TipoProducto tipo).
-    //El método devuelve la lista de productos del tipo que se le pasa
-    //como parámetro.
+    /*El método devuelve la lista de productos del tipo que se le pasa
+como parámetro.*/
 
-    public List<Producto> getPorTipo(List<Producto> productos, TipoProducto tipo){
-        List<Producto> Lista_productos = new ArrayList<>();
-        for(List<Producto> Producto: productos){
-        if (productos.get(Producto).getTipoProducto().equals(tipo)){
-            Lista_productos.add(Producto);
-        }}
-        return Lista_productos;
+    public List<Producto> getPorTipo(List<Producto> productos, TipoProducto tipo) {
+        List<Producto> listaProductos = new ArrayList<>();
+        for (Producto producto : productos) {
+            if (producto.getTipoProducto().equals(tipo)) {
+                listaProductos.add(producto);
+            }
+        }
+        return listaProductos;
     }
 
-    public List<Producto> getPorAlmacen (List<Producto> productos, Almacen almacen){
+    /* El método devuelve la lista de productos del almacen que se le pasa
+como parámetro.*/
+    public List<Producto> getPorAlmacen(List<Producto> productos, Almacen almacen) {
         List<Producto> ProductosDelAlmacen = new ArrayList<>();
-        for(List<Producto> Producto: productos){
-            if (productos.get(Producto).getAlmacen().equals(almacen)){
-                ProductosDelAlmacen.add(Producto);
-            }}
+        for (Producto producto : productos) {
+            if (producto.getAlmacen().equals(almacen)) {
+                ProductosDelAlmacen.add(producto);
+            }
+        }
         return ProductosDelAlmacen;
     }
 }
